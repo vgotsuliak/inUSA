@@ -13,12 +13,12 @@ export const getIpInfo = dispatch => () => {
           payload: { us: true, location: `${ipInfo.city}, ${ipInfo.country_name}` }
         })
       }
-      return fetch(`/maps/api/directions/json?origin=New+York&destination=Washington+DC&key=AIzaSyBSk1lEl1YEgspCS2U6l9Dtyaf2gyHHi-U`)
+      return fetch(`/maps/api/directions/json?origin=${ipInfo.city}&destination=Washington+DC&key=AIzaSyBSk1lEl1YEgspCS2U6l9Dtyaf2gyHHi-U`)
         .then(res => res.json())
         .then(res => {
           dispatch({
             type: GET_IP_INFO_SUCCESS,
-            payload: { us: false, location: `${ipInfo.city}, ${ipInfo.country_name}`, distance: _.get(res, 'routes[0].legs[0].distance.value', 0) }
+            payload: { us: false, location: `${ipInfo.city}, ${ipInfo.country_name}`, distance: Number(_.get(res, 'routes[0].legs[0].distance.value', 0) / 1609.344).toFixed(2) },
           })
         });
     });

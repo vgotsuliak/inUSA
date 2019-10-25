@@ -22,9 +22,9 @@ class Sticker extends React.PureComponent {
     const { classes, title, distance, location } = this.props;
     return (
       <div className={classes.sticker}>
-        <div>{title}</div>
-        <div>{distance}</div>
-        <div>{location}</div>
+        <div className={classes.title}>{title}</div>
+        <div className={classes.distance}>{distance}</div>
+        <div className={classes.location}>Location: {location}</div>
       </div>
     );
   }

@@ -13,10 +13,16 @@ class Wall extends React.PureComponent {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, us, location, distance } = this.props;
+    const title = us ? 'You\'re where you should be!' : 'Pack your bags!';
+    const distanceText = `You're ${distance} miles away from USA`;
     return (
       <div className={classes.wall}>
-        <Sticker />
+        <Sticker
+          title={title}
+          location={location}
+          distance={distanceText}
+        />
       </div>
     );
   }
@@ -24,7 +30,9 @@ class Wall extends React.PureComponent {
 }
 
 const mapStateToProps = state => ({
-  ip: state.ip,
+  location: state.location,
+  distance: state.distance,
+  us: state.us,
 });
 
 const mapDispatchToProps = dispatch => ({
