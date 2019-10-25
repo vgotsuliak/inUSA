@@ -1,12 +1,8 @@
 import React from 'react';
+import Wall from './components/wall';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
-  );
+  return <Wall />;
 }
 
 export default App;
