@@ -9,4 +9,4 @@
 
 ## Known issues
 
-### Google Maps API not always can build a route between different continets, so in this case distance may be 0 miles.
+### Google Maps API not always can build a route between different continents, so in this case distance may be 0 miles.
