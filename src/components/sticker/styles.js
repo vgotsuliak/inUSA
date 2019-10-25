@@ -7,6 +7,7 @@ export default {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'space-between',
   },
 
   title: {
