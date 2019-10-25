@@ -2,6 +2,7 @@
   "name": "are-you-in-usa",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://maps.googleapis.com",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.11.0",

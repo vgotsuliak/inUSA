@@ -1,0 +1,1 @@
+export const GET_IP_INFO_SUCCESS = 'GET_IP';
